@@ -30,8 +30,16 @@ def mode(x):
 			if e == i:
 				n+=1
 		freq.update({i:n})
-	return max(freq, key=freq.get)
-	#PROBLEM: ONLY RETURNS ONE KEY, POSSIBLE >1 KEY WITH EQUAL MAX VALUES
+
+	#initial list of max key, value pair. Will update if another key shares same max value
+	mx = {max(freq, key=freq.get):freq[max(freq, key=freq.get)]}
+
+	for key, value in freq.iteritems():
+		#if value of instance == value of mx, it shares the max value so add to dictionary
+		if value == mx.get(mx.keys()[0]):
+			mx.update({key:value})
+
+	return mx
 
 
 def pop_var(x):

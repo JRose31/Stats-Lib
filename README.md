@@ -14,7 +14,7 @@ Takes the mean of numbers in a list.
 Takes the median of numbers in a list. Averages two medians for list of even lengths.
 
 ## mode(x)
-*BUG: ONLY RETURNS ONE MODE EVEN WHEN THERE IS TWO VALUES OF THE SAME MAXIMUM FREQUENCY*
+Returns a key, value pair of key that appears the most *(the most occuring number in the list)*.
 
 ## pop_var(x):
 Takes the population variance of a set.
