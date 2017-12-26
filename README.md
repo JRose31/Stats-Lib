@@ -2,7 +2,7 @@
 Library for statistical functions written in python. (Personal data science development project)
 
 ## Importing
-*from **stats** import ******
+*from **stats** import **
 
 ## Functions
 *All functions take single list only. Matrixes will not work*
