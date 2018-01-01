@@ -2,7 +2,9 @@
 Library for statistical functions written in python. (Personal data science development project)
 
 ## Importing
-from **stats** import *
+```python:
+from stats import *
+```
 
 ## Functions
 *All functions take single list only. Matrixes will not work*
@@ -27,4 +29,6 @@ from **stats** import *
 
 ### samp_sd(x):
 >Takes the square root of the sample variance to get the standard deviation of the set.
+
+
 
