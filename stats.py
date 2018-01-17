@@ -22,7 +22,7 @@ def mode(x):
 	freq = {}
 
 	'''iterates through list and gives key value pair
-	key being the instance in the list, value being 
+	key being the instance in the list, value being
 	number of times that instance appears in the list'''
 	for i in x:
 		n = 0
@@ -86,3 +86,22 @@ def pop_sd(x):
 def samp_sd(x):
 	return math.sqrt(samp_var(x))
 
+
+
+def fibonacci(x):
+#argument is the length of the returned list of integers
+#counter starts at 2 due to list starting with first two integers
+	counter = 2
+	numbers = [0, 1]
+	while True:
+		'''gets last two numbers in the list
+		and adds the sum of those two numbers
+		to the list
+		'''
+		base = numbers[-2]
+		next_num = numbers[-1]
+		numbers.append(base+next_num)
+		counter += 1
+		if counter == x:
+			break
+	return numbers

@@ -30,5 +30,5 @@ from stats import *
 ### samp_sd(x):
 >Takes the square root of the sample variance to get the standard deviation of the set.
 
-
-
+### fibonacci(x):
+>Takes the desired length of the returned list as an integer, returns fibonacci sequence.
