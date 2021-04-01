@@ -85,23 +85,24 @@ def pop_sd(x):
 
 def samp_sd(x):
 	return math.sqrt(samp_var(x))
+	
 
+# takes the argument of quantity of numbers you want returned
+def fib(x):
+    try:
+        #initiate list with first two numbers in sequence
+        seq = [0, 1]
 
+        #initialize count for numbers already in sequence
+        count = 2
 
-def fibonacci(x):
-#argument is the length of the returned list of integers
-#counter starts at 2 due to list starting with first two integers
-	counter = 2
-	numbers = [0, 1]
-	while True:
-		'''gets last two numbers in the list
-		and adds the sum of those two numbers
-		to the list
-		'''
-		base = numbers[-2]
-		next_num = numbers[-1]
-		numbers.append(base+next_num)
-		counter += 1
-		if counter == x:
-			break
-	return numbers
+        while count < x:
+            #add result of sum of last two numbers to initial list
+            seq.append(seq[-1]+seq[-2])
+
+            #incriment count
+            count += 1
+
+        return(seq)
+    except:
+        print("Variable must be an integer")
