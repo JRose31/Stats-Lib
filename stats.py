@@ -85,7 +85,7 @@ def pop_sd(x):
 
 def samp_sd(x):
 	return math.sqrt(samp_var(x))
-	
+
 
 # takes the argument of quantity of numbers you want returned
 def fib(x):
@@ -93,15 +93,9 @@ def fib(x):
         #initiate list with first two numbers in sequence
         seq = [0, 1]
 
-        #initialize count for numbers already in sequence
-        count = 2
-
-        while count < x:
+        while len(seq) < x:
             #add result of sum of last two numbers to initial list
             seq.append(seq[-1]+seq[-2])
-
-            #incriment count
-            count += 1
 
         return(seq)
     except:
