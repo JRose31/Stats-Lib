@@ -7,7 +7,7 @@ from stats import *
 ```
 
 ## Functions
-*All functions take single list only. Matrixes will not work*
+*All functions apart from lin_reg, take single list only. Matrices will not work*
 
 ### mean(x):
 >Takes the mean of numbers in a list.
