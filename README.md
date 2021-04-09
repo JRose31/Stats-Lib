@@ -32,3 +32,7 @@ from stats import *
 
 ### fibonacci(x):
 >Takes the desired length of the returned list as an integer, returns fibonacci sequence.
+
+### lin_reg(x, y):
+>Takes the argument of two lists, equal in length, and returns the Linear Regression equation in string format
+```y' = a + bx```

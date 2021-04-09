@@ -62,8 +62,7 @@ def pop_var(x):
 	return variance
 
 def samp_var(x):
-	x = sorted(x)
-	num = x
+	num = sorted(x)233
 
 	#creates mean of data set
 	mean = sum(num)/len(num)
@@ -100,3 +99,34 @@ def fib(x):
         return(seq)
     except:
         print("Variable must be an integer")
+
+#take the argument of two list, equal in dimensions and returns the Linear Regression Equation
+def lin_reg(x, y):
+
+    #Equation found @ https://www.statisticshowto.com/probability-and-statistics/regression-analysis/find-a-linear-regression-equation/
+
+    n = len(x)
+
+    Ex, Ey = sum(x), sum(y)
+
+    Ex2, Ey2 = sum([i**2 for i in x]), sum([i**2 for i in y])
+
+    Exy = sum([(num*y[idx]) for idx, num in enumerate(x)])
+
+    '''
+    print(f"Sample size: {n}")
+    print(f"Sum of X: {Ex}")
+    print(f"Sum of Y: {Ey}")
+    print(f"Sum of X^2: {Ex2}")
+    print(f"Sum of Y^2: {Ey2}")
+    print(f"Sum of XY: {Exy}")
+    '''
+
+    a = round(((Ey*Ex2)-(Ex*Exy))/(n*(Ex2)-((Ex)**2)), 4)
+    #print(a)
+
+    b = round(((n*Exy)-(Ex*Ey))/((n*Ex2)-(Ex**2)), 4)
+    #print(b)
+
+    Linear_Regression = (f"y' = {a} + {b}x ")
+    return(Linear_Regression)
